@@ -12,7 +12,8 @@ h1 {
     z-index: 9;
 }
 
-h2 {
+h2,
+.radio {
     text-align: center;
     color: darkmagenta;
     position: relative;
