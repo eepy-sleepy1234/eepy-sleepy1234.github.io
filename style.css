@@ -4,6 +4,8 @@ h1 {
     position: fixed;
     z-index: 10;
     background-color: white;
+    height: 200;
+    width: auto;
 }
 
 .gif {
