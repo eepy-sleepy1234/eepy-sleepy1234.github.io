@@ -6,7 +6,7 @@ h1 {
 }
 
 .gif {
-    position: sticky;
+    position: relative;
     top: 200px;
     z-index: 9;
 }
