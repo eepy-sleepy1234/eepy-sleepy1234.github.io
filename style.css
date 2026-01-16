@@ -2,9 +2,10 @@ h1 {
     text-align: center;
     color: purple;
     position: fixed;
+    z-index: 10;
 }
 
 .gif {
-    position: relative;
+    position: sticky;
     top: 200px;
 }
