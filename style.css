@@ -8,4 +8,12 @@ h1 {
 .gif {
     position: sticky;
     top: 200px;
+    z-index: 9;
+}
+
+h2 {
+    text-align: center;
+    color: darkmagenta;
+    position: relative;
+    z-index: 8;
 }
