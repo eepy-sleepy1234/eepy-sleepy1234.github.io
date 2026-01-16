@@ -1,4 +1,10 @@
 h1 {
     text-align: center;
     color: purple;
+    position: fixed;
+}
+
+.gif {
+    position: relative;
+    top: 200px;
 }
