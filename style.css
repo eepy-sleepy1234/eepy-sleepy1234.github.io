@@ -11,13 +11,13 @@ h1 {
 .gif {
     position: relative;
     top: 200px;
-    z-index: 9;
+    z-index: 8;
 }
 
 h2,
 .question {
     text-align: center;
-    color: darkmagenta;
+    color: lightsteelblue;
     position: relative;
-    z-index: 8;
+    z-index: 9;
 }
