@@ -46,7 +46,7 @@ ul {
     height: 160px;
     content-visibility: hidden;
     position: absolute;
-    top: 1375px;
+    top: 50%;
     right: 5%;
     z-index: 11;
 }
