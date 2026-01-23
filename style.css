@@ -15,6 +15,18 @@ h1 {
     display: inline-block;
     font-size: 60px;
 }
+button {
+    color: red;
+    background-color: white;
+    border: 0px;
+    font-size: 20px;
+    display: inline-block;
+    float: left;
+    transform: translateY(-50px);
+}
+button:hover {
+    color: darkblue;
+}
 
 .gif {
     position: relative;
@@ -46,7 +58,7 @@ ul {
     height: 160px;
     content-visibility: hidden;
     position: absolute;
-    top: 1375px;
+    top: 170%;
     right: 5%;
     z-index: 11;
 }
@@ -57,4 +69,8 @@ ul {
 
 .submit {
     text-align: center;
+}
+
+.tenor-gif-embed {
+    margin-top: 100px;
 }
