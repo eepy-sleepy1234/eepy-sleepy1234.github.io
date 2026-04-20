@@ -166,58 +166,10 @@ const spyObserver = new IntersectionObserver(entries => {
 
 sections.forEach(s => spyObserver.observe(s));
 
-const list = document.getElementById("skillList");
-const items = Array.from(list.children);
-
-const itemHeight = 40;
-const totalHeight = items.length * itemHeight;
-
-let offset = 0;
-const speed = 0.3;
-
-function animate() {
-  offset += speed;
-
-  updateStyles();
-
-  requestAnimationFrame(animate);
-}
-
-function updateStyles() {
-  const highlightY = 40;
-
-  items.forEach((item, i) => {
-    // 🔥 key change: use modulo instead of resetting offset
-    const wrappedOffset = offset % totalHeight;
-
-    let y = i * itemHeight - wrappedOffset;
-
-    // keep within visual range smoothly
-    if (y < -itemHeight) y += totalHeight;
-    if (y > totalHeight - itemHeight) y -= totalHeight;
-
-    const centerY = y + itemHeight / 2;
-
-    const distance = centerY - highlightY;
-    const abs = Math.abs(distance);
-
-    if (abs > itemHeight * 1.5) {
-      item.style.opacity = 0;
-      return;
-    }
-
-    const scale = 1 - abs / 120;
-    const rotate = distance / 6;
-
-    item.style.opacity = 1 - abs / 80;
-
-    item.style.transform = `
-      scale(${scale})
-      rotateX(${rotate}deg)
-    `;
-
-    item.style.zIndex = Math.round(100 - abs);
-  });
-}
-
-animate();
+document.querySelectorAll('.carousel-track').forEach(track => {
+  let idx = 0;
+  setInterval(() => {
+    idx = (idx + 1) % track.children.length;
+    track.style.transform = `translateY(-${idx * 28}px)`;
+  }, 1800);
+});
